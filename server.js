@@ -26,21 +26,15 @@ app.set("view engine", "ejs");
 
 //4 Routing
 app.post("/create-item", (req, res) => {
-    // console.log(req.body);
-    // res.json({ test: "success" });
 });
-
+//TODO: code with db here
 app.get('/author', (req, res) => {
-    res.render ("author", {user: user}) ;
+    res.render("author", {user: user}) ;
 });
 
-
-// TODO: code with db here
 app.get("/", function(req, res) {
     res.render("harid");
 });
-
-
 
 const server = http.createServer(app);
 let PORT = 3000;
