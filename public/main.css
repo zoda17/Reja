@@ -89,7 +89,84 @@
     width: 221px;
     height: 126px;
     margin-left: 44px;
-    background-color: aqua;
+    
+}
+
+.left_2 .age_about  {
+    /* Age */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 25px;
+    flex-direction: row;
+    /* align-items: center; */
+}
+
+.age {
+    /* Rectangle 2 */
+position: relative;
+width: 46.21px;
+height: 24px;
+/* Yellow */
+background: rgb(255, 180, 0);
+text-align: center;
+}
+
+.left_2 .res_info {
+    /* Residence */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 24px;
+    width: 100%;
+    margin-top: 10px;
+    flex-direction: row;
+}
+
+.residence {
+    position: relative;
+    width: 89px;
+    height: 24px;
+    background-color: rgb(255, 180, 0);
+    text-align: center;
+}
+
+ .freelance_info {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 24px;
+    width: 100%;
+    margin-top: 10px;
+    flex-direction: row;
+ }
+
+.freelance {
+    position: relative;
+    width: 85px;
+    height: 24px;
+    text-align: center;
+    background-color: rgb(255, 180, 0);
+
+}
+
+.address_info {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 24px;
+    width: 100%;
+    margin-top: 10px;
+    flex-direction: row; 
+}
+
+.address {
+    position: relative;
+    width: 89px;
+    height: 24px;
+    background-color: rgb(255, 180, 0);
+    text-align: center; 
 }
 
 .main_frame .left_frame .left_1-2 { 
@@ -118,8 +195,96 @@ color: #2b2b2b;
     height: 126px;
     margin-top: 25px;
     margin-left: 45px;
-    background-color: aqua;
 }
+
+.lang_title {
+    color: rgb(43, 43, 43);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 123.6%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.lang_txt {
+    color: rgb(118, 118, 118);
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.percentage_bar_container {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    border-radius: 30px;
+    margin-top: 6px;
+    border: 0.5px;
+  background: rgb(255, 180, 0);
+}
+
+.percentage_bar {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(255, 180, 0);
+}
+
+.percentage_bar2 {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(255, 180, 0);
+    }
+
+ .percentage_bar3 {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(255, 180, 0);
+    }
+
+    .percentage_bar4 {
+     height: 2px;
+     width: 30%;
+     background-color: rgb(255, 180, 0);
+     }
+    
+    .percentage_bar5 {
+      height: 2px;
+      width: 100%;
+      background-color: rgb(255, 180, 0);
+    }
+    
+    .percentage_bar6 {
+        height: 2px;
+        width: 70%;
+        background-color: rgb(255, 180, 0);
+     }
+
+     .percentage_bar7 {
+        height: 2px;
+        width: 90%;
+        background-color: rgb(255, 180, 0);
+    }
+    
+    .percentage_bar8 {
+        height: 2px;
+        width: 100%;
+        background-color: rgb(255, 180, 0);
+        }
+    
+
+
+    .lang_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    }
 
 .main_frame .left_frame .left_1-3 {
 position: relative;
@@ -180,7 +345,7 @@ color: #767676;
     height: 252px;
     margin-top: 25px;
     margin-left: 45px;
-    background-color: aqua;
+   
 
 }
 
