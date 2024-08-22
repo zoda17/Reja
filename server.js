@@ -2,7 +2,7 @@ const http = require("http");
 const mongodb = require("mongodb");
 
 let db;
-const connectionString = "mongodb+srv://zoda17:Zozo99((@cluster0.unahi.mongodb.net/Reja";
+const connectionString = "mongodb+srv://zoda17:Zozo99((@cluster0.unahi.mongodb.net/Reja?retryWrites=true&w=majority&appName=Cluster0";
 
 mongodb.connect(connectionString,
      {useNewUrlParser: true, useUnifiedTopology: true, 
@@ -12,7 +12,7 @@ else {
     console.log("MongoDB connection succeed");
     module.exports = client;
 
-    
+
     const app = require("./app")
     const server = http.createServer(app);
     let PORT = 3000;

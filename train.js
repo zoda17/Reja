@@ -94,7 +94,22 @@
 
 // MIT TASK
 
-function countLetter(letter, word) {
-    return word.split(letter).length - 1;
+// function countLetter(letter, word) {
+//     return word.split(letter).length - 1;
+// }
+// console.log(countLetter("e", "cheese")); 
+
+// B TASK
+
+function countDigits(str) {
+    let count = 0;
+    str.split('').forEach(char => {
+        if (char >= '0' && char <= '9') {
+            count++;
+        }
+    });
+    return count;
 }
-console.log(countLetter("e", "cheese")); 
+
+console.log(countDigits("0000A0000")); 
+
