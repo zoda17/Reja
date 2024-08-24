@@ -99,17 +99,69 @@
 // }
 // console.log(countLetter("e", "cheese")); 
 
-// B TASK
+// // B TASK
 
-function countDigits(str) {
-    let count = 0;
-    str.split('').forEach(char => {
-        if (char >= '0' && char <= '9') {
-            count++;
+// function countDigits(str) {
+//     let count = 0;
+//     str.split('').forEach(char => {
+//         if (char >= '0' && char <= '9') {
+//             count++;
+//         }
+//     });
+//     return count;
+// }
+
+// console.log(countDigits("0000A0000")); 
+
+// // C TASK
+
+
+const moment = require("moment");
+
+class Shop {
+    constructor(kiwi, banana, apple) {
+        this.apple = apple;
+        this.kiwi = kiwi;
+        this.banana = banana;
+    }
+    static tellMeTime() {
+        const time = moment().format("YYYY-MM-DD HH:mm:ss");
+        console.log(`At the moment ${time}, fruits left.`);
+    }
+
+    fruitAmount() {
+        const time = moment().format("YYYY-MM-DD HH:mm:ss");
+        console.log(`Now ${time} ${this.apple} apple, ${this.banana} banana, ${this.kiwi} kiwi availabe!`);
+    }
+
+    
+    sell(fruit, amount) {
+        const time = moment().format("YYYY-MM-DD HH:mm:ss");
+        if (this[fruit] !== undefined && this[fruit] >= amount) {
+            this[fruit] -= amount;
+            console.log(`Right now ${time} ${amount}${fruit} sold. Total: ${this[fruit]}`);
+        } else {
+            console.log(`${time} ${fruit} not enough amount ${this[fruit]}`);
         }
-    });
-    return count;
+    }
+
+    buy(fruit, amount) {
+        const time = moment().format("YYYY-MM-DD HH:mm:ss");
+        if (this[fruit] !== undefined) {
+            this[fruit] += amount;
+            console.log(`${time} Currently ${amount} ${fruit} are purchased. New amount: ${this[fruit]}`);
+        } else {
+            console.log(`${time} we do not have strawberry`);
+        }
+    }
 }
 
-console.log(countDigits("0000A0000")); 
 
+const shop = new Shop(4, 5, 2);  
+
+shop.fruitAmount();  
+shop.sell('apple', 1); 
+shop.buy('kiwi', 3);  
+shop.fruitAmount(); 
+
+Shop.tellMeTime();  
