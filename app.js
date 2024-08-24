@@ -4,17 +4,9 @@ const res = require("express/lib/response");
 const app = express();
 const fs = require("fs");
 
-// let user;
-// fs.readFile("database/user.json", "utf8", (err, data) => {
-//     if (err) {
-//         console.log("ERROR", err);
-//     } else {
-//         user = JSON.parse(data)
-//     }
-// });
-
 // MongoDB call
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 // 1 Entry code
 app.use(express.static("public"));
@@ -36,14 +28,23 @@ app.post("/create-item", (req, res) => {
         res.json(data.ops[0]);
     });
 });
-//TODO: code with db here
-app.get('/author', (req, res) => {
-    res.render("author", {user: user}) ;
+// //TODO: code with db here
+// app.get('/author', (req, res) => {
+//     res.render("author", {user: user}) ;
+// });
+app.post("/delete-item", (req, res) => {
+    const id = req.body.id;
+    db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data) {
+        res.json({ state: "success" });
+    }
+);
 });
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
     console.log('user entered /');
-    db.collection("plans").find().toArray((err, data) => {
+    db.collection("plans")
+    .find()
+    .toArray((err, data) => {
         if(err) {
             console.log(err);
             res.end("someting went wrong");
