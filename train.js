@@ -116,52 +116,74 @@
 // // C TASK
 
 
-const moment = require("moment");
+// const moment = require("moment");
 
-class Shop {
-    constructor(kiwi, banana, apple) {
-        this.apple = apple;
-        this.kiwi = kiwi;
-        this.banana = banana;
-    }
-    static tellMeTime() {
-        const time = moment().format("YYYY-MM-DD HH:mm:ss");
-        console.log(`At the moment ${time}, fruits left.`);
-    }
+// class Shop {
+//     constructor(kiwi, banana, apple) {
+//         this.apple = apple;
+//         this.kiwi = kiwi;
+//         this.banana = banana;
+//     }
+//     static tellMeTime() {
+//         const time = moment().format("YYYY-MM-DD HH:mm:ss");
+//         console.log(`At the moment ${time}, fruits left.`);
+//     }
 
-    fruitAmount() {
-        const time = moment().format("YYYY-MM-DD HH:mm:ss");
-        console.log(`Now ${time} ${this.apple} apple, ${this.banana} banana, ${this.kiwi} kiwi availabe!`);
-    }
+//     fruitAmount() {
+//         const time = moment().format("YYYY-MM-DD HH:mm:ss");
+//         console.log(`Now ${time} ${this.apple} apple, ${this.banana} banana, ${this.kiwi} kiwi availabe!`);
+//     }
 
     
-    sell(fruit, amount) {
-        const time = moment().format("YYYY-MM-DD HH:mm:ss");
-        if (this[fruit] !== undefined && this[fruit] >= amount) {
-            this[fruit] -= amount;
-            console.log(`Right now ${time} ${amount}${fruit} sold. Total: ${this[fruit]}`);
-        } else {
-            console.log(`${time} ${fruit} not enough amount ${this[fruit]}`);
-        }
-    }
+//     sell(fruit, amount) {
+//         const time = moment().format("YYYY-MM-DD HH:mm:ss");
+//         if (this[fruit] !== undefined && this[fruit] >= amount) {
+//             this[fruit] -= amount;
+//             console.log(`Right now ${time} ${amount}${fruit} sold. Total: ${this[fruit]}`);
+//         } else {
+//             console.log(`${time} ${fruit} not enough amount ${this[fruit]}`);
+//         }
+//     }
 
-    buy(fruit, amount) {
-        const time = moment().format("YYYY-MM-DD HH:mm:ss");
-        if (this[fruit] !== undefined) {
-            this[fruit] += amount;
-            console.log(`${time} Currently ${amount} ${fruit} are purchased. New amount: ${this[fruit]}`);
-        } else {
-            console.log(`${time} we do not have strawberry`);
-        }
+//     buy(fruit, amount) {
+//         const time = moment().format("YYYY-MM-DD HH:mm:ss");
+//         if (this[fruit] !== undefined) {
+//             this[fruit] += amount;
+//             console.log(`${time} Currently ${amount} ${fruit} are purchased. New amount: ${this[fruit]}`);
+//         } else {
+//             console.log(`${time} we do not have strawberry`);
+//         }
+//     }
+// }
+
+
+// const shop = new Shop(4, 5, 2);  
+
+// shop.fruitAmount();  
+// shop.sell('apple', 1); 
+// shop.buy('kiwi', 3);  
+// shop.fruitAmount(); 
+
+// Shop.tellMeTime();  
+
+
+
+// TASK D
+// Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+function checkContent(string1, string2) {
+    if (string1.length !== string2.length) {
+        return false;
     }
+ let sortedString1 = string1.split('').sort().join('');
+ let sortedString2 = string2.split('').sort().join('');
+
+ return sortedString1 === sortedString2;
+
 }
 
+console.log(checkContent("hi there", "erh ih"));
+console.log(checkContent("hey", "hye"));
 
-const shop = new Shop(4, 5, 2);  
 
-shop.fruitAmount();  
-shop.sell('apple', 1); 
-shop.buy('kiwi', 3);  
-shop.fruitAmount(); 
-
-Shop.tellMeTime();  
