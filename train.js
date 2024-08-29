@@ -172,18 +172,33 @@
 // Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
-function checkContent(string1, string2) {
-    if (string1.length !== string2.length) {
-        return false;
+// function checkContent(string1, string2) {
+//     if (string1.length !== string2.length) {
+//         return false;
+//     }
+//  let sortedString1 = string1.split('').sort().join('');
+//  let sortedString2 = string2.split('').sort().join('');
+
+//  return sortedString1 === sortedString2;
+
+// }
+
+// console.log(checkContent("hi there", "erh ih"));
+// console.log(checkContent("hey", "hye"));
+
+
+
+// Task E
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+//MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(string) {
+    if (string.length === 0) {
+        return '';
     }
- let sortedString1 = string1.split('').sort().join('');
- let sortedString2 = string2.split('').sort().join('');
 
- return sortedString1 === sortedString2;
-
+let reverseString = string.split('').reverse().join('');
+return reverseString;
 }
 
-console.log(checkContent("hi there", "erh ih"));
-console.log(checkContent("hey", "hye"));
-
-
+console.log(getReverse( "Zoda"));
